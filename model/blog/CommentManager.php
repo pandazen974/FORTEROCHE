@@ -14,45 +14,30 @@ class CommentManager{
         $this->conn = $db;
     }
  
-function create(){
-        //requête
-        $query ="INSERT INTO" .$this->table_name." SET
-        author=:author, comment=:comment, comment_date=:comment_date";
-        
-        $stmt=$this->conn->prepare($query);
-        
-        //les valeurs qui sont publiées
-        $this->author=htmlspecialchars(strip_tags($this->author));
-        $this->comment=htmlspecialchars(strip_tags($this->comment));
-        
-        //pour heure de création
-        $this->timestamp=date('d-m-Y H:i:s');
-        
-        //lier les valeurs
-        $stmt->bindParam(":author",$this->author);
-        $stmt->bindParam(":comment",$this->comment);
-        $stmt->bindParam(":created",$this->timestamp);
-
-    if($stmt->execute()){
-        return true;
-    }else{
-        return false;
-    }
+function create(){      
   }
     
-function readAll(){
-     $query = "SELECT
-                id, author, comment 
+public function readAll(Comment $post_id){
+     $query = "SELECT *
+
             FROM
                 " . $this->table_name . "
             ORDER BY
-                id"
- 
+                id
+           ";
+
     $stmt = $this->conn->prepare( $query );
     $stmt->execute();
- 
-    return $stmt;
-} 
+
+    while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
+    {
+
+        $comments[]=new Comment($donnees);
+
+
+
+    }
+}
     
 function report(){
     
@@ -60,4 +45,3 @@ function report(){
 
  
 }
-?>
