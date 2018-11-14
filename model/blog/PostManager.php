@@ -1,7 +1,7 @@
 <?php
-namespace Forteroche\blog;
+namespace Forteroche\model\blog;
 
-use Forteroche\blog\Post;
+use Forteroche\model\blog\Post;
 
 
 class PostManager{
