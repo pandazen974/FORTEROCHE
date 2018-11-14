@@ -1,6 +1,6 @@
 <?php
 
-namespace Forteroche\model\blog\config;
+namespace Forteroche\model\config;
 
 class Database{
   
