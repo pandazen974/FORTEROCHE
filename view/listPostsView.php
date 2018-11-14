@@ -25,14 +25,19 @@ foreach ($row as $key => $value) {
                 <div class="text-center">
                    
                     <h3>
-                        <?= nl2br(htmlspecialchars($value->_title)) ?>
+                        <?= nl2br(htmlspecialchars($value->title())) ?>
                     </h3>
 
                     <p>
-                        <?= nl2br(htmlspecialchars($value->_content)) ?>
+                        <?= nl2br(htmlspecialchars($value->content())) ?>
 
                     </p>
+                    
+                    
 
+                </div>
+                <div class="text-right">
+                <a href="index.php?action=readPost&amp;id=<?= $value->id() ?>" >Commentaires</a>
                 </div>
             </div>
 
