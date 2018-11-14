@@ -1,9 +1,9 @@
 <?php
 
 use \Forteroche\Autoloader;
-use\Forteroche\controllers\PostController;
+use\Forteroche\controllers\post\PostController;
 
-require'model/Autoloader.php';
+require'Autoloader.php';
 
 Autoloader::register();
 
