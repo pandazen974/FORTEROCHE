@@ -1,6 +1,6 @@
 <?php
 
-namespace Forteroche\blog;
+namespace Forteroche\model\blog;
 
 class Comment{
  // attributs
