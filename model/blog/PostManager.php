@@ -45,7 +45,21 @@ class PostManager{
 
     }
 
-    public function read(){
+    public function readSelectedPost($id){
+        $query = "SELECT *
+            FROM
+                " . $this->table_name . "
+            WHERE
+                id = :id
+            LIMIT
+                0,1";
+   
+    $stmt = $this->conn->prepare( $query );
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+    $post=new Post($row);
+    return $post;
     }
 
     public function update(){
@@ -56,7 +70,7 @@ class PostManager{
  
 
    }
-?>
+
 
 
 
