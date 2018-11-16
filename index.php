@@ -2,6 +2,7 @@
 
 use \Forteroche\Autoloader;
 use\Forteroche\controllers\post\PostController;
+use\Forteroche\controllers\comment\CommentController;
 
 require'Autoloader.php';
 
@@ -12,13 +13,19 @@ Autoloader::register();
 try { // On essaie de faire des choses
     if (isset($_GET['action'])) {
 
-        if ($_GET['action'] == 'display') {
-        
-            $postController->display();
+        if ($_GET['action'] == 'displayPosts') {
+            $postController=new PostController();
+            $postController->displayPosts();
 
         }
         
-        elseif ($_GET['action']=='goToLogIn'){
+        if ($_GET['action'] == 'readOnePost') {
+            $postController=new PostController();
+            $postController->readOnePost();
+
+        }
+        
+        if ($_GET['action']=='goToLogIn'){
             goToLogIn();
         }
         
@@ -28,7 +35,7 @@ try { // On essaie de faire des choses
 
     else {
         $postController=new PostController();
-       $postController->display();
+       $postController->displayPosts();
 
     }
 
