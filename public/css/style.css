@@ -127,3 +127,9 @@ label {
 {
     margin-top:20px;
 }
+
+#comment_link
+{
+    display:block;
+    text-align:right;
+}
