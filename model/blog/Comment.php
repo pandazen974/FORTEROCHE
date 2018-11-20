@@ -5,9 +5,9 @@ namespace Forteroche\model\blog;
 class Comment{
  // attributs
     private $id;
-    private $post_id;
+    private $postId;
     private $author;
-    private $comment;
+    private $comment_date;
     
 public function __construct(array $donnees)
   {
@@ -45,7 +45,7 @@ public function hydrate(array $donnees)
 
   {
 
-    return $this->_post_id;
+    return $this->_postId;
 
   }
 
@@ -57,6 +57,18 @@ public function hydrate(array $donnees)
 
     return $this->_author;
 
+  }
+  
+  public function comment()
+  {
+      
+    return $this->_comment;
+      
+  }
+  
+  public function commentDate()
+  {
+    return $this->_commentDate;
   }
 
   
@@ -76,7 +88,7 @@ public function hydrate(array $donnees)
 
   
 
-  public function setPostId($post_id)
+  public function setPostId($postId)
 
   {
 
@@ -84,7 +96,7 @@ public function hydrate(array $donnees)
 
    
 
-      $this->_post_id = $post_id;
+      $this->_postId = $postId;
 
     
 
@@ -109,6 +121,13 @@ public function hydrate(array $donnees)
   {
       
       $this->_comment=$comment;
+  }
+  
+  public function setCommentDate($commentDate)
+          
+  {
+      
+      $this->_commentDate=$commentDate;
   }
   
     
