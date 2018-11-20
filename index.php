@@ -25,6 +25,12 @@ try { // On essaie de faire des choses
 
         }
         
+        if ($_GET['action'] == 'displayComments') {
+            $postController=new CommentController();
+            $postController->displayComments();
+
+        }
+        
         if ($_GET['action']=='goToLogIn'){
             goToLogIn();
         }
