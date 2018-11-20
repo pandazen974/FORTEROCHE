@@ -17,27 +17,21 @@ class CommentManager{
 function create(){      
   }
     
-public function readAll(Comment $post_id){
-     $query = "SELECT *
-
+ public function readCommentsFromPost($postId){
+        $query = "SELECT *
             FROM
                 " . $this->table_name . "
-            ORDER BY
-                id
-           ";
-
+            WHERE
+                postId = :postId";
+   
     $stmt = $this->conn->prepare( $query );
+    $stmt->bindParam(':postId', $postId);
     $stmt->execute();
-
-    while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
-    {
-
-        $comments[]=new Comment($donnees);
-
-
-
+    while($commentRow = $stmt->fetch(\PDO::FETCH_ASSOC)){
+    $comments[]=new Comment($commentRow);
     }
-}
+    return $comments;
+    }
     
 function report(){
     
@@ -45,3 +39,4 @@ function report(){
 
  
 }
+
