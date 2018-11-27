@@ -12,15 +12,6 @@ body
     background-color:rgba(224, 236, 255, 0.4);
 }
 
-
-
-
-
-h3
-{
-    text-decoration: underline;
-}
-
 .back 
 {
     background-image: url("/Projet_4/public/images/alaska.png");
@@ -126,10 +117,4 @@ label {
 #comentbox .btn
 {
     margin-top:20px;
-}
-
-#comment_link
-{
-    display:block;
-    text-align:right;
 }
