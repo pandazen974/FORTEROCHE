@@ -31,6 +31,12 @@ try { // On essaie de faire des choses
 
         }
         
+        if ($_GET['action'] == 'addComment') {
+            $postController=new CommentController();
+            $postController->addComment();
+            
+        }
+        
         if ($_GET['action']=='goToLogIn'){
             goToLogIn();
         }
