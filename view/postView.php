@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <a href="index.php">Retour aux �pisodes</a>
+                <a href="index.php">Retour aux épisodes</a>
             </div>
         </div>
 
@@ -25,8 +25,11 @@
                 <p>
 
                     <?= nl2br(htmlspecialchars($post->content())) ?><br/>
-                    <a href="index.php?action=displayComments&amp;id=<?= $post->id() ?>" id="comment_link">Commentaires</a>
-
+                    <?php if (!isset($comments)){ ?>
+                    <a href="index.php?action=displayComments&amp;id=<?= $post->id() ?>" class="pull-right" id="comment-link">Commentaires</a>
+                    <?php
+    }
+                    ?>
                         <?php if (isset($_COOKIE['identifiant'])) // Si il exite un cookie
     { 
     // On affiche les liens
@@ -78,5 +81,3 @@
 
 
 <?php require('template.php'); ?>
-
-
