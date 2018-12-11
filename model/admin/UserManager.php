@@ -55,4 +55,8 @@ Class UserManager{
         return $hash;
     }
     
+    public function startSession($pseudo){ 
+         $_SESSION['pseudo']= $pseudo; 
+    }
+    
 }
