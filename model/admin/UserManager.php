@@ -59,4 +59,8 @@ Class UserManager{
          $_SESSION['pseudo']= $pseudo; 
     }
     
+    public function endSession(){
+        session_destroy(); 
+    }
+    
 }
