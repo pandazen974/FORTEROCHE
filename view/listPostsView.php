@@ -2,6 +2,7 @@
 
 
 <?php ob_start(); ?>
+
 <div class="row back">
     <div class="col-xs-12">
         <div class="row">
@@ -13,10 +14,11 @@
         </div>
 
         <?php
+        
 
 foreach ($row as $key => $value) {
     
-
+   
 
 
    
@@ -27,18 +29,20 @@ foreach ($row as $key => $value) {
                     <h3>
                         <?= nl2br(htmlspecialchars($value->title())) ?>
                     </h3>
+                    <br/>
 
-                    <p>
-                        <?= nl2br(htmlspecialchars($value->content())) ?>
+                    <div class="allbackground">
+                        <?= $value->content() ?>
+                         <div class="text-right" id="read">
+                    <a href="index.php?action=readOnePost&amp;id=<?= $value->id() ?>" >Lire</a>
+                </div>
 
-                    </p>
+                    </div>
                     
-                    
+                    <br/>
 
                 </div>
-                <div class="text-right">
-                <a href="index.php?action=readPost&amp;id=<?= $value->id() ?>" >Commentaires</a>
-                </div>
+               
             </div>
 
 
