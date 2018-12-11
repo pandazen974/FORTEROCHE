@@ -43,5 +43,32 @@ class UserController{
         
     }
     
+    public function openSession(){
+     $database = new Database();
+    $db = $database->getConnection();
+    $userManager=new UserManager($db);
+    $user=$userManager->verifyUserExistence($_POST['pseudo']);
+    if(!empty($_POST['pseudo']) AND !empty($_POST['pass'])){
+        if(!empty($user)){
+            $hash=$userManager->getHashedPassword($user);
+          if(password_verify($_POST["pass"],$hash)){
+              $connexion=$userManager->startSession($_POST['pseudo']);
+              require_once ('index.php');
+              
+          }else{
+              $erreur='Le mot de passe est incorrect!';   
+          }
+            
+        }else{
+            $erreur='L\'utilisateur n\'existe pas\!';
+        }
+    }else{
+        $erreur='Tous les champs doivent être complétés!';
+    }
+     if(isset($erreur)){
+        require_once ("view/loginView.php");
+    }
+    
+    }
    
 }
