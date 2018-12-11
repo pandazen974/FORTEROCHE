@@ -1,5 +1,3 @@
-
-
 <?php $title = 'Inscription'; ?>
 
 
@@ -7,7 +5,7 @@
 
 
 <div id="connexion" class='row'>
-    <div id="formbox" class="col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3">
+    <div class="col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3 formbox">
         <div class="text-center">
                 <h2>INSCRIPTION</h2>
             <hr>
@@ -33,7 +31,7 @@
                     <span>Vous avez déjà un compte? <a href="index.php?action=goToLogIn">Se Connecter</a></span>
                     <?php if (isset($erreur)){
                         ?>
-                    <p id="erreur"><?= $erreur ?></p>
+                    <span id="erreur"><?= $erreur ?></span>
                     <?php } ?>
                     
                 </form>
