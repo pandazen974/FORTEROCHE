@@ -50,4 +50,9 @@ Class UserManager{
     return $user;
     }
     
+    public function getHashedPassword(User $user){
+        $hash=$user->pass();
+        return $hash;
+    }
+    
 }
