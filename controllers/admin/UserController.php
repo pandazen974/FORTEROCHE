@@ -70,5 +70,13 @@ class UserController{
     }
     
     }
+    
+     public function shutSession(){
+    $database = new Database();
+    $db = $database->getConnection();
+    $userManager=new UserManager($db);
+    $user=$userManager->endSession();
+    header("Location: http://localhost/Projet_4/index.php?action=goToLogIn");
+    }
    
 }
