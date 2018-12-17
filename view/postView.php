@@ -22,7 +22,7 @@
                     <?= nl2br(htmlspecialchars($post->title())) ?>
                 </h3>
 
-
+                <span class="pull-right"><i><?= nl2br(htmlspecialchars($post->postDate())) ?></i></span><br/>
 
                 <div class="allbackground">
 
@@ -32,16 +32,7 @@
                     <?php
     }
                     ?>
-                        <?php if (isset($_SESSION['pseudo'])) // Si il exite un cookie
-    { 
-    // On affiche les liens
-                    ?>
-                    
-
-                            <a href="index.php?action=modifyPost&amp;id=<?= $post->id() ?>"><span class="glyphicon glyphicon-edit"></span>Modifier</a>
-                            <a href="index.php?action=deletePost&amp;id=<?= $post->id() ?>"><span class="glyphicon glyphicon-trash"></span>Supprimer</a>
-  <?php                          
-} ?>
+                        
                 </div>
                     <br/>
                     <div class="row box">
