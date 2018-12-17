@@ -29,6 +29,7 @@ foreach ($row as $key => $value) {
                     <h3>
                         <?= nl2br(htmlspecialchars($value->title())) ?>
                     </h3>
+                    <span class="pull-right"><i><?= nl2br(htmlspecialchars($value->postDate())) ?></i></span>
                     <br/>
 
                     <div class="allbackground">
