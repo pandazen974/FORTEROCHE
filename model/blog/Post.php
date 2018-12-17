@@ -7,6 +7,7 @@ class Post{
     private $id;
     private $title;
     private $content;
+    private $postDate;
     
 public function __construct(array $donnees)
   {
@@ -57,6 +58,14 @@ public function hydrate(array $donnees)
     return $this->_content;
 
   }
+  
+  public function postDate()
+          
+  {
+      
+      return $this->_postDate;
+  }
+
 
   
     
@@ -103,6 +112,15 @@ public function hydrate(array $donnees)
 
   }
 
+   public function setPostDate($postDate)
+ 
+  {
+      
+      
+      $this->_postDate= $postDate;
+      
+      
+  }
   
 
 
