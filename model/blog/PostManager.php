@@ -21,7 +21,7 @@ class PostManager{
     }
 
     public function readAll(){
-     $query = "SELECT *
+     $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
 
             FROM
                 " . $this->table_name . "
@@ -46,7 +46,7 @@ class PostManager{
     }
 
     public function readSelectedPost($id){
-        $query = "SELECT *
+        $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
             FROM
                 " . $this->table_name . "
             WHERE
