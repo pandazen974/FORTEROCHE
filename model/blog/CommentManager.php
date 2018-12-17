@@ -35,7 +35,7 @@ function createOneComment(Comment $comment){
     }
     
  public function readCommentsFromPost($postId){
-        $query = "SELECT *
+        $query = "SELECT*, DATE_FORMAT(commentDate, ' %d/%m/%Y à %H:%i:%s') as commentDate
             FROM
                 " . $this->table_name . "
             WHERE
