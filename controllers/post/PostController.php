@@ -49,7 +49,15 @@ public function editPost(){
     }
     $row = $postManager->readAll();
     require_once('view/listPostsView.php');
-        }
+}
+
+public function getAdminList(){
+    $database = new Database();
+    $db = $database->getConnection();
+    $postManager= new PostManager($db);
+    $row = $postManager->readAll();
+    return $row;
+}
 
 }
 
