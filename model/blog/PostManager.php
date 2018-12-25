@@ -17,11 +17,22 @@ class PostManager{
         $this->conn = $db;
     }
 
-    public function create(){
+    public function create(Post $post){
+    $query = "INSERT INTO
+                    " . $this->table_name . "
+                SET
+                 title=:title, content=:content, postDate= NOW()";
+ 
+    $stmt = $this->conn->prepare($query);
+    $title=$post->title();
+    $content=$post->content();
+    $stmt->bindParam(':title',$title);
+    $stmt->bindParam(':content',$content);
+    $stmt->execute();
     }
 
     public function readAll(){
-     $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
+    $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
 
             FROM
                 " . $this->table_name . "
@@ -46,7 +57,7 @@ class PostManager{
     }
 
     public function readSelectedPost($id){
-        $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
+    $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
             FROM
                 " . $this->table_name . "
             WHERE
@@ -62,7 +73,18 @@ class PostManager{
     return $post;
     }
 
-    public function update(){
+    public function update(Post $post){
+    $query = "UPDATE posts
+                    SET title=:title, content=:content
+                    WHERE id = :id";
+    $stmt = $this->conn->prepare($query);
+    $id=$post->id();
+    $title=$post->title();
+    $content=$post->content();
+    $stmt->bindParam(':id',$id);
+    $stmt->bindParam(':title',$title);
+    $stmt->bindParam(':content',$content);
+    $stmt->execute();    
     }
 
     public function delete(){
