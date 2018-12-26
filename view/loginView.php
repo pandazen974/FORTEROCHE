@@ -1,15 +1,12 @@
 <?php $title = 'Connexion'; ?>
 
-
 <?php ob_start(); ?>
 
-
 <div id="connexion" class='row'>
-    <div class="col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3 formbox">
+    <div class="col-xs-12 col-sm-12  col-md-6 formbox">
         <div class="text-center">
                 <h2>CONNEXION</h2>
             <hr>
-            
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -19,10 +16,9 @@
                     <label for="pseudo">Pseudo:</label><br/>
                     <input type="text" id="pseudo" name="pseudo" /><br/>
 
-                    <label for=""pass>Mot de passe:</label><br/>
+                    <label for="pass">Mot de passe:</label><br/>
                     <input type="password" id="pass" name="pass" pattern=".{11,}" required title="11 caracteres minimum"><br/>
-                    <?php if (isset($erreur)){
-                        ?>
+                    <?php if (isset($erreur)){ ?>
                     <span id="erreur"><?= $erreur ?></span><br/>
                     <?php } ?>
                     <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" ></span> Se connecter</button><br/>
@@ -39,3 +35,4 @@
 
 
 <?php require_once('template.php'); ?>
+
