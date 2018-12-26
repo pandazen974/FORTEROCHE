@@ -5,10 +5,10 @@ namespace Forteroche\model\config;
 class Database{
   
     // specify your own database credentials
-    private $host = "localhost";
-    private $db_name = "alaska";
-    private $username = "root";
-    private $password = "";
+    private $host = "db767077655.hosting-data.io";
+    private $db_name = "db767077655";
+    private $username = "dbo767077655";
+    private $password = "Alaska01-MYSQL";
     public $conn;
   
     // get the database connection
