@@ -70,6 +70,11 @@ public function hydrate(array $donnees)
   {
     return $this->_commentDate;
   }
+  
+  public function report()
+  {
+    return $this->_report;
+  }
 
   
     
@@ -128,6 +133,12 @@ public function hydrate(array $donnees)
   {
       
       $this->_commentDate=$commentDate;
+  }
+  
+  public function setReport($report)
+          
+  {
+      $this->_report=$report;
   }
   
     
