@@ -1,15 +1,13 @@
 <?php $title = 'Inscription'; ?>
 
-
 <?php ob_start(); ?>
 
 
 <div id="connexion" class='row'>
-    <div class="col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3 formbox">
+    <div class="col-xs-12 col-sm-12  col-md-6 formbox">
         <div class="text-center">
                 <h2>INSCRIPTION</h2>
-            <hr>
-            
+                <hr>   
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -33,16 +31,13 @@
                         ?>
                     <span id="erreur"><?= $erreur ?></span>
                     <?php } ?>
-                    
                 </form>
             </div>
         </div>
     </div>
-
 </div>
 
 
 <?php $content = ob_get_clean(); ?>
-
 
 <?php require_once('template.php'); ?>
