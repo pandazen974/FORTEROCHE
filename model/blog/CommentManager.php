@@ -111,7 +111,13 @@ public function reportComment(Comment $comment){
         
 }  
 
-
+public function deleteComment(Comment $comment){
+    $query = "DELETE FROM comments WHERE id = :id";
+    $stmt = $this->conn->prepare($query);
+    $id=$comment->id();
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
 }
 
