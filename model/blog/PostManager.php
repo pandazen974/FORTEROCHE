@@ -73,7 +73,7 @@ class PostManager{
     return $post;
     }
 
-    public function update(Post $post){
+    public function updatePost(Post $post){
     $query = "UPDATE posts
                     SET title=:title, content=:content
                     WHERE id = :id";
@@ -87,7 +87,12 @@ class PostManager{
     $stmt->execute();    
     }
 
-    public function delete(){
+    public function deletePost(Post $post){
+    $query = "DELETE FROM posts WHERE id = :id";
+    $stmt = $this->conn->prepare($query);
+    $id=$post->id();
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
     }
  
 
