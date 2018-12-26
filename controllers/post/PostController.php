@@ -59,6 +59,16 @@ public function getAdminList(){
     return $row;
 }
 
+public function erasePost(){
+    $database = new Database();
+    $db = $database->getConnection();
+    $postManager= new PostManager($db);
+    $post=$postManager->readSelectedPost($_GET['id']);
+    $postManager->deletePost($post);
+    $row = $postManager->readAll();
+    require_once('view/listPostsView.php');
+}
+
 }
 
 
