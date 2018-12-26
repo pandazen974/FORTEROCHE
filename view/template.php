@@ -4,14 +4,26 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>
-        <?= $title ?>
-    </title>
-    
+    <meta name="description" content="Bienvenue sur le site de Jean Forteroche, ici vous pouvez découvrir son dernier roman en ligne Bille simple pour l'Alaska" />
+    <meta property="og:title" content="Jean Forteroche" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.pandazen.net/Projet_4/" />
+    <meta property="og:image" content="http://www.pandazen.net/Projet_4/public/images/jeanforteroche.png" />
+    <meta property="og:description" content="Bienvenue sur le site de Jean Forteroche, ici vous pouvez découvrir son dernier roman en ligne Bille simple pour l'Alaska" />
+    <meta name="twitter:card" content="Billet Simple pour l'Alaska de Jean Forteroche">
+    <meta name="twitter:site" content="@JeanForteroche">
+    <meta name="twitter:title" content="JeanForteroche">
+    <meta name="twitter:description" content="Bienvenue sur le site de Jean Forteroche, ici vous pouvez découvrir son dernier roman en ligne Bille simple pour l'Alaska"">
+    <meta name="twitter:creator" content="@Kevin_Ahpine">
+    <meta name="twitter:image:src" content="http://www.pandazen.net/Projet_4/public/images/jeanforteroche.png" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Sofia|Source+Sans+Pro" rel="stylesheet"> 
     <link href="/Projet_4/public/css/style.css" rel="stylesheet" />
+    <title>
+        <?= $title ?>
+    </title>
 </head>
 
 
