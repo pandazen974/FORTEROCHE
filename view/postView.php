@@ -6,9 +6,9 @@
 <div class='row back '>
     <div class="col-xs-12 box">
         <div class="row box">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <div class="chapter">
-                    <h3>
+                    <h3 class="text-center">
                         <?= nl2br(htmlspecialchars($post->title())) ?>
                     </h3>
                     <span class="pull-right"><i><?= nl2br(htmlspecialchars($post->postDate())) ?></i></span><br/>
