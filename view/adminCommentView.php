@@ -3,7 +3,7 @@
 if (!empty($line)){
 foreach ($line as $key => $value) {
 ?>
-    <div class="row col-md-6 col-md-6 col-md-offset-3  chapter">
+    <div class="row col-md-6 col-md-6 col-md-offset-3 chapter">
         <div class="text-center">
             <h3>
                 <?= nl2br(htmlspecialchars($value->author())) ?>
