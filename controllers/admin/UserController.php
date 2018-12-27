@@ -76,7 +76,7 @@ class UserController{
     $db = $database->getConnection();
     $userManager=new UserManager($db);
     $user=$userManager->endSession();
-    header("Location: http://localhost/Projet_4/index.php?action=goToLogIn");
+    header("Location: http://www.pandazen.net/Projet_4/index.php?action=goToLogIn");
     }
    
 }
