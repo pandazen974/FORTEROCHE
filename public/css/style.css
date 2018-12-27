@@ -301,6 +301,7 @@ footer h3{
     color:white;
 }
 .footer-link:hover{
+   color:white;
    font-weight:bold;
    text-decoration: underline;
 }
