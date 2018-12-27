@@ -77,18 +77,17 @@
         
         <footer class="row">
          
-                <div  class="col-md-4 text-justify">  
-                    
-                <div class="thumbnail">
-                     <h3 class="text-center">Qui suis je?</h3>
-                     <img src="/Projet_4/public/images/jeanforteroche.png" alt="Jean Forteroche" class="img-rounded">
-                     <span>Né à Nîmes en 1957 dans un petit village, je me passionne pour la littérature dès mon plus jeune âge. Ayant étudié dans la prestigieuse université 
+                <div  class="col-xs-12 col-sm-6 col-md-4 text-justify">  
+                    <div class="thumbnail">
+                        <h3 class="text-center">Qui suis je?</h3>
+                        <img src="/Projet_4/public/images/jeanforteroche.png" alt="Jean Forteroche" class="img-rounded">
+                        <span>Né à Nîmes en 1957 dans un petit village, je me passionne pour la littérature dès mon plus jeune âge. Ayant étudié dans la prestigieuse université 
                         de la Sorbonne,je décide d'écrire mon premier sur ma vie mouvementée d'étudiant. Mon père était un grand voyageur et c'est grâce à lui que j'ai pu me rendre
                     en Alaska dont mon inspiration se fera grandement ressentir à travers cet ouvrage en ligne.</span>
-                 </div>
+                    </div>
                  </div>
              
-                <div id="contact" class="col-md-4 form-group">
+                <div id="contact" class="col-xs-12 col-sm-6 col-md-4 form-group">
                     <h3 class="text-center">Contactez moi:</h3><br/>
                     <form>
                       <label for="nom">Nom:</label><br/>
@@ -116,25 +115,28 @@
     ?>   
                 </div>
              
-                 <div class="col-md-4">
+                 <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="col-md-12 text-center">
                     <h3>A propos:</h3><br/>
                     <a class="footer-link" href="#">Mentions légales</a><br/>
                     <a class="footer-link" href="#">Mes autres romans</a><br/>
                     <a class="footer-link" href="#">Publicités</a><br/>
-           
+                    </div>
+                    <div class="col-md-12 text-center">
                      <h3>Suivez moi:</h3><br/>
                     <a class="btn btn-default" href="#"><i class="fa fa-twitter fa-2x"></i></a>
                     <a class="btn btn-default" href="#"><i class="fa fa-facebook fa-2x"></i></a>
                     <a class="btn btn-default" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-                    <a class="btn btn-default" href="#"><i class="fa fa-spotify fa-2x"></i></a>
+                    <a class="btn btn-default" href="#"><i class="fa fa-spotify fa-2x"></i></a> 
+                    </div>
                 </div>
              <hr>
         <div class="row">
-                <div  class="col-md-12 ">
+                <div  class="col-sm-12 col-sm-12 col-md-12 ">
                     <span> ©2018 -Un blog de Jean Forteroche-Tous droits réservés </span>
                 </div>
              
-         </div>          
+        </div>          
     </footer>
             
     </div>
