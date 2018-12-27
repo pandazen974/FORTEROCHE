@@ -18,7 +18,7 @@
     <meta name="twitter:image:src" content="http://www.pandazen.net/Projet_4/public/images/forteroche.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <link rel="icon" type="image/ico" href="http://www.pandazen.net/Projet_4/public/images/forteroche.png"/>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.pandazen.net/Projet_4/public/images/forteroche.png" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Sofia|Source+Sans+Pro" rel="stylesheet"> 
