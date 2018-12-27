@@ -3,7 +3,7 @@
 
 <?php ob_start(); ?>
 <div id="home" class='row'>
-    <div id="homebox" class="col-xs-12 col-sm-12  col-md-2">
+    <div id="homebox" class="col-xs-12 col-sm-12  col-md-2 text-center">
         <hr>
             <h3> Tableau de bord</h3>
             <hr>
