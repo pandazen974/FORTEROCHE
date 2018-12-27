@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 <div class="row back">
-    <div class="col-xs-12">
+    <div class="col-md-12">
         <div class="row">
             <div class="text-center jumbotron">
                 <div class="container">
@@ -16,7 +16,7 @@
     if (!empty($row)){
         foreach ($row as $key => $value) {   
 ?>
-    <div class="row col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3  chapter">
+    <div class="row  col-md-6 col-md-6 col-md-offset-3  chapter">
         <div class="text-center">
             <h3>
                 <?= nl2br(htmlspecialchars($value->title())) ?>
@@ -34,7 +34,7 @@
 <?php
         }
     }else{ ?>
-        <div class="row col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3  chapter">
+        <div class="row col-md-6 col-md-6 col-md-offset-3  chapter">
                 <div class="text-center">
                     <span><?php echo $erreur ?></span>
                 </div>
