@@ -31,12 +31,14 @@
                 <div  class="col-xs-12 col-sm-12  col-md-6 col-md-6 col-md-offset-3 formbox text-center">
                     <h2>Ajouter un commentaire</h2>
                     <form action="index.php?action=addComment&amp;id=<?= $post->id() ?>" method="post">
-                        <label for="author">Pseudo:</label><br />
+                        <label for="author">Pseudo*:</label><br />
                         <input type="text" id="author" name="author" /><br/>
                         
-                        <label for="comment">Commentaire:</label><br />
+                        <label for="comment">Commentaire*:</label><br />
                         <textarea id="comment" name="comment" ></textarea><br/>
-
+                        <?php if (isset($erreur)){?>
+                        <span id="erreur">*<?= $erreur?></span><br/>
+                        <?php } ?>
                         <button class="btn btn-primary" type="submit">Ajouter <span class="glyphicon glyphicon-comment" ></span></button>
                     </form>
                 </div>
