@@ -60,7 +60,7 @@ class UserController{
           }
             
         }else{
-            $erreur='L\'utilisateur n\'existe pas\!';
+            $erreur='L\'utilisateur n\'existe pas!';
         }
     }else{
         $erreur='Tous les champs doivent être complétés!';
