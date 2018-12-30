@@ -17,7 +17,7 @@ class PostManager{
         $this->conn = $db;
     }
 
-    public function create(Post $post){
+    public function createPost(Post $post){
     $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
