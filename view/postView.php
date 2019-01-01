@@ -9,11 +9,11 @@
             <div class="col-md-12">
                 <div class="chapter">
                     <h3 class="text-center">
-                        <?= nl2br(htmlspecialchars($post->title())) ?>
+                        <?= $post->title()?>
                     </h3>
-                    <span class="pull-right"><i><?= nl2br(htmlspecialchars($post->postDate())) ?></i></span><br/>
+                    <span class="pull-right"><i><?= $post->postDate() ?></i></span><br/>
                         <div class="allbackground">
-                            <?= nl2br(htmlspecialchars($post->content())) ?><br/>
+                            <?= $post->content() ?><br/>
                             <?php  if (!isset($comments)){ ?>
                                 <a href="index.php?action=displayComments&amp;id=<?= $post->id() ?>" class="pull-right" id="comment-link">Commentaires</a><br/>
                             <?php }?>
