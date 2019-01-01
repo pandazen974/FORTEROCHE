@@ -87,6 +87,14 @@ a:hover{
     font-weight:bold;
 }
 
+/*page erreur*/
+#error-page{
+    background-image: url("/Projet_4/public/images/alaska.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+}
+
 /*formulaires*/
 
 hr {
