@@ -20,7 +20,7 @@ try { // Cherche la page
         }
 
 //      ADMIN
-        if ($_GET['action'] == 'displayDashboard') {
+        elseif ($_GET['action'] == 'displayDashboard') {
             if(isset($_GET['admin'])){        
                 if ($_GET['admin'] == 'editPost') {
                 $postController=new PostController();
@@ -28,39 +28,39 @@ try { // Cherche la page
                 }
         
         //Va à la page édition
-                if ($_GET['admin'] == 'goToEditView') {
+                elseif ($_GET['admin'] == 'goToEditView') {
                 $postController=new PostController();
                 $post=$postController->goToEditView();
                 }
         
         //Va à la page pour suppression
-                if ($_GET['admin'] == 'goToDeleteView') {
+                elseif ($_GET['admin'] == 'goToDeleteView') {
                 $postController=new PostController();
                 $row=$postController->getAdminList();
                 }
         
         //suppression d'une publication
-                if ($_GET['admin'] == 'erasePost') {
+                elseif ($_GET['admin'] == 'erasePost') {
                 $postController=new PostController();
                 $postController->erasePost();
                 }
         
         //suppression d'un commentaire
-                if ($_GET['admin'] == 'eraseComment') {
+                elseif ($_GET['admin'] == 'eraseComment') {
                 $commentController=new commentController();
                 $commentController->eraseComment();
                 $line=$commentController->displayReportedComments();
                 }
         
         //réintègre un commentaire
-                if ($_GET['admin'] == 'returnReportedComment') {
+                elseif ($_GET['admin'] == 'returnReportedComment') {
                 $commentController=new commentController();
                 $commentController->returnReportedComment();
                 $line=$commentController->displayReportedComments();
                 }
         
         //liste les commentaires signalés
-                if ($_GET['admin'] == 'displayReportedComments'){
+                elseif ($_GET['admin'] == 'displayReportedComments'){
                 $commentController=new CommentController();
                 $line=$commentController->displayReportedComments();
                 }
@@ -76,72 +76,78 @@ try { // Cherche la page
 //      all users
 //      PUBLICATIONS
         //Affiche les publications
-        if ($_GET['action'] == 'displayPosts') {
+        elseif ($_GET['action'] == 'displayPosts') {
             $postController=new PostController();
             $postController->displayPosts();
 
         }
         
         //Affiche une seule publication
-        if ($_GET['action'] == 'readOnePost') {
+        elseif ($_GET['action'] == 'readOnePost') {
             $postController=new PostController();
             $postController->readOnePost();
-
+            if(empty($post)){
+               throw new Exception('Cette page est inexistante');
+            }else{
+                throw new Exception('Cette page est inexistante');
+            }
         }
         
 //      COMMENTAIRES
         //Affiche les commentaires d'une publication
-        if ($_GET['action'] == 'displayComments') {
+        elseif ($_GET['action'] == 'displayComments') {
             $commentController=new CommentController();
             $commentController->displayComments();
 
         }
         
         //Ajout d'un commentaire
-        if ($_GET['action'] == 'addComment') {
+        elseif ($_GET['action'] == 'addComment') {
             $commentController=new CommentController();
             $commentController->addComment();
             
         }
         
         //Signaler un Commentaire
-        if ($_GET['action'] == 'flagComment') {
+        elseif ($_GET['action'] == 'flagComment') {
             $commentController=new CommentController();
             $commentController->flagComment();   
         }
         
 //      MEMBRES
         //Créer 
-        if ($_GET['action'] == 'registerUser') {
+        elseif ($_GET['action'] == 'registerUser') {
             $userController=new UserController();
             $userController->registerUser();
             
         }
    
         //Va à la page connexion
-        if ($_GET['action']=='goToLogIn'){
+        elseif ($_GET['action']=='goToLogIn'){
             $userController=new UserController();
             $userController->goToLogIn();
         }
         
         //Va à la page s'enregistrer
-        if ($_GET['action']=='goToSignOn'){
+        elseif ($_GET['action']=='goToSignOn'){
             $userController=new UserController();
             $userController->goToSignOn();
         }
         
         //Ouvrir une session
-        if ($_GET['action']=='openSession'){
+        elseif ($_GET['action']=='openSession'){
             $userController=new UserController();
             $userController->openSession();
             require_once('view/home.php');
         }
         
         //Fermer une session
-        if ($_GET['action']=='shutSession'){
+        elseif ($_GET['action']=='shutSession'){
             $userController=new UserController();
             $userController->shutSession();
             
+        }else{
+         throw new Exception('Cette page est inexistante');
         }
 
     }
@@ -154,6 +160,7 @@ try { // Cherche la page
 
 catch(Exception $e) { // S'il y a eu une erreur, alors...
 
-    echo 'Erreur : ' . $e->getMessage();
+   $errorMessage = $e->getMessage();
+   require('view/errorView.php');
 
 }
