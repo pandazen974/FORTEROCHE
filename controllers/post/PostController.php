@@ -22,7 +22,9 @@ public function readOnePost(){
     $db = $database->getConnection();
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['id']);
+    if(!empty($post)){
     require_once('view/postView.php');
+    }
 }
 
 public function goToEditView(){    
