@@ -69,7 +69,11 @@ class PostManager{
     $stmt->bindParam(':id', $id);
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-    $post=new Post($row);
+    if($row===false){
+        $post=null;
+    }else{
+        $post=new Post($row);
+    }
     return $post;
     }
 
