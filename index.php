@@ -77,9 +77,14 @@ try { // Cherche la page
 //      PUBLICATIONS
         //Affiche les publications
         elseif ($_GET['action'] == 'displayPosts') {
+            if(isset($_GET['page'])){
             $postController=new PostController();
             $postController->displayPosts();
-
+            }else{
+            $postController=new PostController();
+            $postController->displayPosts();
+            }
+            
         }
         
         //Affiche une seule publication
@@ -88,8 +93,6 @@ try { // Cherche la page
             $postController->readOnePost();
             if(empty($post)){
                throw new Exception('Cette page est inexistante');
-            }else{
-                throw new Exception('Cette page est inexistante');
             }
         }
         
