@@ -13,7 +13,7 @@ foreach ($line as $key => $value) {
                 <?= nl2br($value->comment()) ?>
             </p>
             <br/>
-            <div class="text-right" id="read">
+            <div class="text-right">
                 <a href="index.php?action=displayDashboard&amp;admin=returnReportedComment&amp;id=<?= $value->id() ?>" ><span class="glyphicon glyphicon-ok"></span> Valider</a><span>/</span>
                 <a class="nav-link active" href="index.php?action=displayDashboard&admin=eraseComment&id=<?= $value->id(); ?>"><span class="glyphicon glyphicon-trash"></span> Supprimer</a>
             </div>
