@@ -3,8 +3,8 @@
            <div class="row">  
                <div class="col-xs-8 col-sm-4 col-md-2 col-md-offset-10 ">
         <?php if (isset($post)){?> <input type='hidden' name='id' value=<?= $post->id()?>> 
-                        <button id="edit-button" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-edit" ></span> Editer</span></button>
-        <?php }else{?>  <button id="edit-button" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-pencil" ></span> Ajouter</span></button><?php } ?> 
+                        <button id="edit-button" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-edit" ></span> Editer</button>
+        <?php }else{?>  <button id="edit-button" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-pencil" ></span> Ajouter</button><?php } ?> 
            
                </div>
            </div>
