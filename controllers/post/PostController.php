@@ -57,7 +57,7 @@ public function editPost(){
         $newPost=$postManager->createPost($post);
     }
     $row = $postManager->readAll();
-    require_once('view/listPostsView.php');
+    require_once('view/dashboard.php');
 }
 
 public function getAdminList(){
@@ -75,7 +75,7 @@ public function erasePost(){
     $post=$postManager->readSelectedPost($_GET['id']);
     $postManager->deletePost($post);
     $row = $postManager->readAll();
-    require_once('view/listPostsView.php');
+    require_once('view/dashboard.php');
 }
 
 }
