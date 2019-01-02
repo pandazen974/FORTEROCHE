@@ -5,12 +5,19 @@ use \Forteroche\model\blog\PostManager;
 use \Forteroche\model\blog\Post;
 
 class PostController{
-   
+
 public function displayPosts(){
     $database = new Database();
     $db = $database->getConnection();
     $postManager= new PostManager($db);
-    $row = $postManager->readAll();
+    // page given in URL parameter, default page is one
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    // set number of records per page
+    $records_per_page = 5;
+    // calculate for the query LIMIT clause
+    $from_record_num = ($records_per_page * $page) - $records_per_page;
+    $row = $postManager->readAllByPage($from_record_num, $records_per_page);
+    $total_rows = $postManager->countAll();
         if (empty($row)){
           $erreur="Aucun article n'a été publié!";
         }
