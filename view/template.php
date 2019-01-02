@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8"/>
@@ -144,7 +144,7 @@
     </div>
      <!-- tinymce-->
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({mode : "exact", elements :"edit" , height : "380" });</script>
+    <script>tinymce.init({mode : "exact", elements :"content" , height : "380" });</script>
 
         <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
