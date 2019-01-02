@@ -243,7 +243,7 @@ input,#comment{
 }
 
 /*page commentView*/
-#report{
+.report{
     color:red;
 }
 
