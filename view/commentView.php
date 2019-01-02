@@ -14,7 +14,7 @@ if(isset($comments)){
                             <a href="index.php?action=flagComment&amp;id=<?=$value->id() ?>&amp;postId=<?=$value->postId() ?>"> <span class="glyphicon glyphicon-flag"></span>Signaler</a>
                         <?php 
                         }else{?>
-                            <span id="report">"Ce commentaire a été signalé et est en attente de modération."</span>
+                            <span class="report">"Ce commentaire a été signalé et est en attente de modération."</span>
                         <?php } ?>
                     </p>
 
