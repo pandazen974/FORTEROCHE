@@ -13,7 +13,7 @@
     <meta name="twitter:card" content="Billet Simple pour l'Alaska de Jean Forteroche">
     <meta name="twitter:site" content="@JeanForteroche">
     <meta name="twitter:title" content="JeanForteroche">
-    <meta name="twitter:description" content="Bienvenue sur le site de Jean Forteroche, ici vous pouvez découvrir son dernier roman en ligne Bille simple pour l'Alaska"">
+    <meta name="twitter:description" content="Bienvenue sur le site de Jean Forteroche, ici vous pouvez découvrir son dernier roman en ligne Bille simple pour l'Alaska">
     <meta name="twitter:creator" content="@Kevin_Ahpine">
     <meta name="twitter:image:src" content="http://www.pandazen.net/Projet_4/public/images/forteroche.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
