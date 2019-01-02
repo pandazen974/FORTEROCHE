@@ -95,7 +95,7 @@
                     <label for="adresse">Email:</label><br/>
                     <input class="form-control" type="email" id="adresse" name="adresse" /><br/>
                     <label for="message">Message:</label><br/>
-                    <textarea class="form-control" name="message"></textarea><br/>
+                    <textarea class="form-control" id="message" name="message"></textarea><br/>
                     <button class="btn btn-primary pull-right" type="submit"><span class="glyphicon glyphicon-ok-sign" ></span> Envoyer</button><br/>
                     </form>
      <?php
