@@ -56,8 +56,7 @@ public function editPost(){
         $post=new Post(['title'=>$_POST['title'],'content'=>$_POST['content']]);
         $newPost=$postManager->createPost($post);
     }
-    $row = $postManager->readAll();
-    require_once('view/dashboard.php');
+     header("Location: http://www.pandazen.net/Projet_4/index.php?action=displayPosts");
 }
 
 public function getAdminList(){
@@ -74,8 +73,8 @@ public function erasePost(){
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['id']);
     $postManager->deletePost($post);
-    $row = $postManager->readAll();
-    require_once('view/dashboard.php');
+    header("Location: http://www.pandazen.net/Projet_4/index.php?action=displayPosts");
+    
 }
 
 }
