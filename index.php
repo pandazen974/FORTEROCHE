@@ -9,8 +9,6 @@ require'Autoloader.php';
 
 Autoloader::register();
 
-
-
 try { // Cherche la page
     if (isset($_GET['action'])) {
         
@@ -77,14 +75,8 @@ try { // Cherche la page
 //      PUBLICATIONS
         //Affiche les publications
         elseif ($_GET['action'] == 'displayPosts') {
-            if(isset($_GET['page'])){
             $postController=new PostController();
-            $postController->displayPosts();
-            }else{
-            $postController=new PostController();
-            $postController->displayPosts();
-            }
-            
+            $postController->displayPosts();   
         }
         
         //Affiche une seule publication
@@ -101,7 +93,9 @@ try { // Cherche la page
         elseif ($_GET['action'] == 'displayComments') {
             $commentController=new CommentController();
             $commentController->displayComments();
-
+            if(empty($comments)){
+               throw new Exception('Cette page est inexistante');
+            }
         }
         
         //Ajout d'un commentaire
