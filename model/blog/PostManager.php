@@ -31,6 +31,29 @@ class PostManager{
     $stmt->execute();
     }
 
+    public function readAllByPage($from_record_num, $records_per_page){
+    $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
+
+            FROM
+                " . $this->table_name . "
+            ORDER BY
+                id
+            LIMIT
+                {$from_record_num}, {$records_per_page}
+           ";
+
+    $stmt = $this->conn->prepare( $query );
+    $stmt->execute();
+
+    while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
+    {
+        $posts[]=new Post($donnees);
+    }
+
+    return $posts;
+
+    }
+    
     public function readAll(){
     $query = "SELECT *,DATE_FORMAT(postDate, 'publié le %d/%m/%Y à %H:%i:%s') as postDate
 
@@ -45,11 +68,7 @@ class PostManager{
 
     while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
     {
-
         $posts[]=new Post($donnees);
-
-
-
     }
 
     return $posts;
@@ -97,6 +116,14 @@ class PostManager{
     $id=$post->id();
     $stmt->bindParam(':id', $id);
     $stmt->execute();
+    }
+    
+    public function countAll(){
+    $query = "SELECT id FROM " . $this->table_name . "";
+    $stmt = $this->conn->prepare( $query );
+    $stmt->execute();
+    $num = $stmt->rowCount();
+    return $num;
     }
  
 
