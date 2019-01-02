@@ -32,7 +32,7 @@
             <span class="pull-right"><i><?= nl2br(htmlspecialchars($value->postDate())) ?></i></span><br/>
             <div class="allbackground">
                 <?= substr($value->content(), 0,500 ).'...'; ?>
-                <div class="text-right" id="read">
+                <div class="text-right">
                     <a href="index.php?action=readOnePost&amp;id=<?= $value->id() ?>" >Lire la suite</a>
                 </div>
             </div><br/>
