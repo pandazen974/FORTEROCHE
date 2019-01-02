@@ -13,7 +13,7 @@
        <input type="text" id="title"  name="title" value="<?php if(isset($post)){echo $post->title();} ?>" /><br/>  
        
        <label for="content" class="edit-menu">Votre épisode:</label>
-       <textarea name="content" id="edit" > <?php if(isset($post)){echo $post->content();} ?></textarea><br/>
+       <textarea name="content" id="content" > <?php if(isset($post)){echo $post->content();} ?></textarea><br/>
        
        </form>
 </div>
