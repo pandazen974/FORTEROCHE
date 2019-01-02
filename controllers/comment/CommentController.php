@@ -57,6 +57,16 @@ public function displayReportedComments(){
     return $line;
 }
 
+public function returnReportedComment(){
+    $database = new Database();
+    $db = $database->getConnection();
+    $commentManager=new CommentManager($db);
+    $comment=$commentManager->readSelectedComment($_GET['id']);
+    $commentManager->reinstateComment($comment);
+    $line = $commentManager->readReportedComments();
+    return $line;   
+}
+
 public function eraseComment(){
     $database = new Database();
     $db = $database->getConnection();
