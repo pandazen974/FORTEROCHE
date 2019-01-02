@@ -94,7 +94,7 @@ try { // Cherche la page
             $commentController=new CommentController();
             $commentController->displayComments();
             if(empty($comments)){
-               throw new Exception('Cette page est inexistante');
+               throw new Exception('Cette page est inexistante ou aucun commentaire n\'a été publié pour le moment');
             }
         }
         
