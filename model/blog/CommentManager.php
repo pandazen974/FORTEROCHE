@@ -109,7 +109,18 @@ public function reportComment(Comment $comment){
     $stmt->bindValue(':report',1);
     $stmt->execute();
         
-}  
+}
+
+public function reinstateComment(Comment $comment){
+    $query = "UPDATE comments
+                    SET report=:report
+                    WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $id=$comment->id();
+        $stmt->bindParam(':id',$id);
+        $stmt->bindValue(':report',0);
+        $stmt->execute();
+}
 
 public function deleteComment(Comment $comment){
     $query = "DELETE FROM comments WHERE id = :id";
