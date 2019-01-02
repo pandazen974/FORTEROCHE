@@ -7,8 +7,8 @@ body
 }
 
 h2{
-     font-family: 'Source Sans Pro', sans-serif;
-      color:rgb(5, 48, 117);
+    font-family: 'Source Sans Pro', sans-serif;
+    color:rgb(5, 48, 117);
 }
 
 h3{
@@ -94,6 +94,7 @@ a:hover{
     background-repeat: no-repeat;
     background-attachment: fixed;  
 }
+
 
 /*formulaires*/
 
@@ -223,6 +224,24 @@ input,#comment{
     color:black;
 }
 
+.pagination{
+    text-align: right;
+}
+
+.pagination li a{
+   background-color: rgb(249, 250, 252);
+   color:rgb(5, 48, 117);
+   border: 2px solid rgb(5, 48, 117);
+ 
+}
+
+.pagination li a:hover{
+    color:black;
+    background-color: rgba(224, 236, 255, 0.6);
+    border: 2px solid black;
+ 
+}
+
 /*page commentView*/
 #report{
     color:red;
@@ -231,12 +250,12 @@ input,#comment{
 
 /*page editView*/
 .edit-menu{
-  color:rgb(5, 48, 117);
-  font-size:20px;
-  background-color:rgba(224, 236, 255, 0.6);
-  padding:5px;
-  border:inset 2px rgb(5, 48, 117);
-  border-radius:3px;
+    color:rgb(5, 48, 117);
+    font-size:20px;
+    background-color:rgba(224, 236, 255, 0.6);
+    padding:5px;
+    border:inset 2px rgb(5, 48, 117);
+    border-radius:3px;
    
 }
 
@@ -245,11 +264,11 @@ input,#comment{
 }
 
 #edit-button{
-background-color: rgb(249, 250, 252);
-color:rgb(5, 48, 117);
-border: 2px solid rgb(5, 48, 117);
-font-weight:bold;
-margin-bottom:40px;
+    background-color: rgb(249, 250, 252);
+    color:rgb(5, 48, 117);
+    border: 2px solid rgb(5, 48, 117);
+    font-weight:bold;
+    margin-bottom:40px;
 }
 
 #edit-button:hover{
@@ -271,6 +290,11 @@ margin-bottom:40px;
 }
 
 
+.edit-link{
+    display:block;
+    text-align:center;
+}
+
 /*footer*/
 footer {
     background-color: rgb(5, 48, 117);
@@ -281,17 +305,17 @@ footer {
 
 footer .btn {
     
-background-color: rgb(249, 250, 252);
-color:rgb(5, 48, 117);
-border: 2px solid rgb(5, 48, 117);
-font-weight:bold;
-margin-bottom:40px;
+    background-color: rgb(249, 250, 252);
+    color:rgb(5, 48, 117);
+    border: 2px solid rgb(5, 48, 117);
+    font-weight:bold;
+    margin-bottom:40px;
 
 }
 
 footer .btn:hover {
-     color:black;
-     background-color:rgba(224, 236, 255, 0.6);
+    color:black;
+    background-color:rgba(224, 236, 255, 0.6);
     border: 2px solid black;
 }
 
@@ -313,7 +337,7 @@ footer h3{
     color:white;
 }
 .footer-link:hover{
-   color:white;
-   font-weight:bold;
-   text-decoration: underline;
+    color:white;
+    font-weight:bold;
+    text-decoration: underline;
 }
