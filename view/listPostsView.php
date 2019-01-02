@@ -11,7 +11,15 @@
                 </div>
             </div>
         </div>
-
+        
+    <div class="col-md-12"> 
+        <div class="row">
+<?php
+    include_once 'paging.php';
+?>
+        </div>
+    </div>
+        
 <?php      
     if (!empty($row)){
         foreach ($row as $key => $value) {   
