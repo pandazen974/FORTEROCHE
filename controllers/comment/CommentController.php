@@ -16,8 +16,9 @@ public function displayComments(){
     
     $commentManager= new CommentManager($db);
     $comments = $commentManager->readCommentsFromPost($_GET['id']);
+    if(!empty($comments)){
     require_once('view/postView.php');
-
+    }
 }
         
 public function addComment(){
