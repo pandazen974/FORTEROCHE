@@ -1,18 +1,20 @@
 <div id="contentbox" class="col-md-10">
+    <div class="row col-md-6 col-md-6 col-md-offset-3  chapter">
+            <div class="text-center edit-view">
     <?php
         foreach ($row as $key => $value) {
     ?>
-        <div class="row col-md-6 col-md-6 col-md-offset-3  chapter">
-            <div class="text-center">
-                <h3>
-                    <?= nl2br(htmlspecialchars($value->title())) ?>
-                </h3>
+        
+                <p>
+                    <?= nl2br(htmlspecialchars($value->title())) ?><br/>
+                <a  href="index.php?action=displayDashboard&amp;admin=goToEditView&AMP;id=<?= $value->id() ?>" class="edit-link"><span class="glyphicon glyphicon-edit"></span> Editer</a>
+                </p>
+                
                 <br/>
-                <a href="index.php?action=displayDashboard&amp;admin=goToEditView&AMP;id=<?= $value->id() ?>" ><span class="glyphicon glyphicon-edit"></span> Editer</a>
-                <br/>
-            </div>
-        </div>
+            
     <?php
     }
     ?>
+            </div>
+  </div>
 </div>
