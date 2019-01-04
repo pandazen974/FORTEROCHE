@@ -33,6 +33,8 @@ public function addComment(){
     $newComment=$commentManager->createOneComment($comment);
     $comments = $commentManager->readCommentsFromPost($_GET['id']);
     }else{
+        $author=$_POST['author'];
+        $comment=$_POST['comment'];
         $erreur="Veuillez compléter tous les champs";
     }
     require_once('view/postView.php');
