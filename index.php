@@ -32,7 +32,7 @@ try { // Cherche la page
                 }
         
         //Va à la page pour suppression
-                elseif ($_GET['admin'] == 'goToDeleteView') {
+                elseif ($_GET['admin'] == 'displayDeleteMenu') {
                 $postController=new PostController();
                 $row=$postController->getAdminList();
                 }
