@@ -34,7 +34,7 @@ public function readOnePost(){
     }
 }
 
-public function goToEditView(){    
+public function displayEditMenu(){    
     if (isset($_GET['id'])){
         $database = new Database();
         $db = $database->getConnection();
