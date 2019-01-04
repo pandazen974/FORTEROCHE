@@ -26,9 +26,9 @@ try { // Cherche la page
                 }
         
         //Va à la page édition
-                elseif ($_GET['admin'] == 'goToEditView') {
+                elseif ($_GET['admin'] == 'displayEditMenu') {
                 $postController=new PostController();
-                $post=$postController->goToEditView();
+                $post=$postController->displayEditMenu();
                 }
         
         //Va à la page pour suppression
