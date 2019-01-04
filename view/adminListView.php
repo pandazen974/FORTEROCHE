@@ -7,7 +7,7 @@
         
                 <p>
                     <?= nl2br(htmlspecialchars($value->title())) ?><br/>
-                <a  href="index.php?action=displayDashboard&amp;admin=goToEditView&AMP;id=<?= $value->id() ?>" class="edit-link"><span class="glyphicon glyphicon-edit"></span> Editer</a>
+                <a  href="index.php?action=displayDashboard&amp;admin=displayEditMenu&AMP;id=<?= $value->id() ?>" class="edit-link"><span class="glyphicon glyphicon-edit"></span> Editer</a>
                 </p>
                 
                 <br/>
