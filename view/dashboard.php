@@ -15,7 +15,7 @@
       <a class="nav-link active" href="index.php?action=displayDashboard&admin=displayEditMenu" ><span class="glyphicon glyphicon-pencil"></span> Créer un article</a>
      </li>
     <li class="nav-item">
-       <a class="nav-link disabled" href="index.php?action=displayDashboard&admin=goToDeleteView"><span class="glyphicon glyphicon-trash"></span> Suppression articles</a>
+       <a class="nav-link disabled" href="index.php?action=displayDashboard&admin=displayDeleteMenu"><span class="glyphicon glyphicon-trash"></span> Suppression articles</a>
     </li>
     <li class="nav-item">
        <a class="nav-link disabled" href="index.php?action=displayDashboard&admin=displayReportedComments"><span class="glyphicon glyphicon-comment"></span> Gérer Commentaires</a>
@@ -29,7 +29,7 @@
         if ($_GET['admin'] == 'displayEditMenu') {
             include_once('adminEditView.php');
         }
-        if ($_GET['admin'] == 'goToDeleteView') {
+        if ($_GET['admin'] == 'displayDeleteMenu') {
             include_once('adminDeleteView.php');
         }
         if($_GET['admin'] == 'displayReportedComments'){
