@@ -6,7 +6,6 @@ use Forteroche\model\admin\User;
 
 Class UserManager{
     
-    // base de donnÃ©ee et nom de la table
     private $conn;
     private $table_name = "users";
  
