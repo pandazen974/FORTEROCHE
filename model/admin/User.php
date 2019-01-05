@@ -17,13 +17,13 @@ public function hydrate(array $donnees)
 {
   foreach ($donnees as $key => $value)
   {
-    // On rÃ©cupÃ¨re le nom du setter correspondant Ã  l'attribut.
+    
     $method = 'set'.ucfirst($key);
         
-    // Si le setter correspondant existe.
+ 
     if (method_exists($this, $method))
     {
-      // On appelle le setter.
+     
       $this->$method($value);
     }
   }
@@ -69,12 +69,7 @@ public function hydrate(array $donnees)
 
   {
 
-    
-
       $this->_id = $id;
-
-    
-
   }
 
   
@@ -83,14 +78,7 @@ public function hydrate(array $donnees)
 
   {
 
-    // On vÃ©rifie qu'il s'agit bien d'une chaÃ®ne de caractÃ¨res.
-
-   
-
       $this->_pseudo = $pseudo;
-
-    
-
   }
 
   
@@ -99,12 +87,7 @@ public function hydrate(array $donnees)
 
   {
 
-    
-
       $this->_pass = $pass;
-
-    
-
   }
   
   public function setEmail($email)
