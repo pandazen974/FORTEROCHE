@@ -6,7 +6,6 @@ use Forteroche\model\blog\Post;
 
 class PostManager{
  
-    // base de donnÃ©ee et nom de la table
     private $conn;
     private $table_name = "posts";
  
