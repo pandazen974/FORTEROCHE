@@ -1,7 +1,0 @@
-AuthName "Veuillez entrer le nom d'utilisateur et le mot de passe"
-
-AuthType Basic
-
-AuthUserFile "/homepages/3/d697344549/htdocs/Projet_4/model/config/.htpasswd"
-
-Require valid-user
