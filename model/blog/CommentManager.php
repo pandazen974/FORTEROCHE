@@ -5,7 +5,7 @@ use Forteroche\model\blog\Comment;
 
 class CommentManager{
  
-    // database connection and table name
+  
     private $conn;
     private $table_name = "comments";
  
