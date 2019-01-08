@@ -143,7 +143,7 @@
             
     </div>
      <!-- tinymce-->
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=0sjj6aeb0m95o6pdw2ou3t1dedyo5phit4dzaswp6p6lg34c"></script> 
     <script>tinymce.init({mode : "exact", elements :"content" , height : "380" });</script>
 
         <!-- jQuery -->
