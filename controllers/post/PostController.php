@@ -3,6 +3,8 @@ namespace Forteroche\controllers\post;
 use\Forteroche\model\config\Database;
 use \Forteroche\model\blog\PostManager;
 use \Forteroche\model\blog\Post;
+use \Forteroche\model\blog\CommentManager;
+use \Forteroche\model\blog\Comment;
 
 class PostController{
 
@@ -70,6 +72,8 @@ public function erasePost(){
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['id']);
     $postManager->deletePost($post);
+    $commentManager=new CommentManager($db);
+    $commentManager->deleteSelectedComments($_GET['id']);
     header("Location: http://www.pandazen.net/Projet_4/index.php?action=displayPosts");
     
 }
