@@ -130,5 +130,22 @@ public function deleteComment(Comment $comment){
     $stmt->execute();
 }
 
+public function deleteSelectedComments($postId){
+    $query = "DELETE FROM comments WHERE postId = :postId";
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam('postId', $postId);
+ 
+    $stmt->execute();
+      while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
+    {
+        
+        $selectedComments[]=new Comment($donnees);
+
+
+
+    }
+    return $selectedComments;
+}
+
 }
 
