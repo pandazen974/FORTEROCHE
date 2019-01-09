@@ -1,4 +1,3 @@
-
 <?php
 namespace Forteroche\model\config;
 class Database{
