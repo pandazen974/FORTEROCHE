@@ -93,8 +93,8 @@ try { // Cherche la page
         elseif ($_GET['action'] == 'displayComments') {
             $commentController=new CommentController();
             $commentController->displayComments();
-            if(empty($comments)){
-               throw new Exception('Cette page est inexistante ou aucun commentaire n\'a été publié pour le moment');
+            if(empty($post)){
+               throw new Exception('Cette page est inexistante');
             }
         }
         
@@ -102,13 +102,18 @@ try { // Cherche la page
         elseif ($_GET['action'] == 'addComment') {
             $commentController=new CommentController();
             $commentController->addComment();
-            
+            if(empty($post)){
+               throw new Exception('Cette page est inexistante');
+            }
         }
         
         //Signaler un Commentaire
         elseif ($_GET['action'] == 'flagComment') {
             $commentController=new CommentController();
-            $commentController->flagComment();   
+            $commentController->flagComment();
+             if(empty($post)OR(empty($comment))){
+               throw new Exception('Cette page est inexistante');
+            }
         }
         
 //      MEMBRES
