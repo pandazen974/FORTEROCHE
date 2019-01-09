@@ -19,11 +19,8 @@ if(isset($comments)){
                     </p>
 
                     <?php
-
         }
 }
-
 ?>
-
             
 
