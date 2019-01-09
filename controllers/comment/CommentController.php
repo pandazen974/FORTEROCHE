@@ -13,20 +13,22 @@ public function displayComments(){
     
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['id']);
-    
+    if(!empty($post)){
     $commentManager= new CommentManager($db);
     $comments = $commentManager->readCommentsFromPost($_GET['id']);
-    if(!empty($comments)){
-    require_once('view/postView.php');
+    if(empty($comments)){
+            $info="Aucun commentaire";
+    }
+    require_once('view/postView.php'); 
     }
 }
         
 public function addComment(){
     $database = new Database();
     $db = $database->getConnection();
-    
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['id']);
+    if(!empty($post)){
     if(!empty($_POST['author']) AND !empty($_POST['comment'])){
     $commentManager=new CommentManager($db);
     $comment=new Comment(['postId'=>$_GET['id'],'author'=>$_POST['author'],'comment'=>$_POST['comment']]);
@@ -38,6 +40,7 @@ public function addComment(){
         $erreur="Veuillez compléter tous les champs";
     }
     require_once('view/postView.php');
+    }
 }
 
 public function flagComment(){
@@ -45,11 +48,13 @@ public function flagComment(){
     $db = $database->getConnection();
     $commentManager=new CommentManager($db);
     $comment=$commentManager->readSelectedComment($_GET['id']);
-    $commentManager->reportComment($comment);
     $postManager= new PostManager($db);
     $post=$postManager->readSelectedPost($_GET['postId']);
+    if(!empty($post)AND(!empty($comment))){
+    $commentManager->reportComment($comment);
     $comments = $commentManager->readCommentsFromPost($_GET['postId']);
     require_once('view/postView.php');
+    }
 }
 
 public function displayReportedComments(){
