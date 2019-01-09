@@ -65,7 +65,11 @@ public function readSelectedComment($id){
     $stmt->bindParam(':id', $id);
     $stmt->execute();
     $line = $stmt->fetch(\PDO::FETCH_ASSOC);
-    $comment=new Comment($line);
+    if($line===false){
+        $comment=null;
+    }else{
+        $comment=new Comment($line);
+    }
     return $comment;
 }
 
@@ -138,11 +142,7 @@ public function deleteSelectedComments($postId){
     $stmt->execute();
       while($donnees=$stmt->fetch(\PDO::FETCH_ASSOC))
     {
-        
         $selectedComments[]=new Comment($donnees);
-
-
-
     }
     return $selectedComments;
 }
